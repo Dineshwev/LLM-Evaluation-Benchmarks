@@ -225,9 +225,29 @@ Source Full Information:
 ```
 
 **Handling Unavailable Sources:**
-- If source cannot be retrieved, note this clearly
-- Assign verdict: **Citation Missing** or **Unsupported** (depending on whether citation exists but is inaccessible)
-- Document retrieval attempt details
+
+The verdict depends on the retrievability of the citation itself:
+
+- **Citation cannot be identified or located** (e.g., generic "studies show" with no specific source) → **Citation Missing**
+  - The AI provided no verifiable citation reference
+  - Evaluator cannot determine whether a source exists
+
+- **Citation is identifiable and source is found, but does not support the claim** → **Unsupported**
+  - The citation is specific enough to locate (e.g., Author, Year)
+  - The source has been accessed and reviewed
+  - The source does not contain evidence for the claim
+
+- **Citation is identifiable but source cannot be accessed** (paywalled, archived, no longer available) → **Note the retrieval limitation**
+  - Document the retrieval attempt and the access barrier
+  - Provide a verdict based on other available evidence:
+    - If citation metadata (title, abstract, etc.) can be reviewed but full text cannot be accessed: Assign **Insufficient Evidence** if preliminary information suggests relevance, or **Unsupported** if preliminary information suggests non-relevance
+    - If no information about the source can be obtained: Assign **Citation Missing** (cannot verify citation)
+  - Record in evaluator notes that source access was limited
+
+- **Citation references a source found but evidence passage cannot be located within the source** → **Unsupported**
+  - The source exists and is accessible
+  - Evaluator has searched the source and found no relevant passage
+  - Verdict reflects that no evidence was found, not that the source is inaccessible
 
 ---
 
@@ -359,7 +379,7 @@ CONCLUSION: Evidence aligns with claim.
    | **Completeness** | 2/1/0 | Are all claim components addressed? |
    | **Relevance** | 2/1/0 | Is the source topically appropriate? |
    | **Evidence Quality** | 2/1/0 | Is the source credible and current? |
-   | **Citation Placement** | 2/1/0 | Is the citation clear and retrievable? |
+   | **Citation Placement & Traceability** | 2/1/0 | Is the citation positioned and traceable; can the source be retrieved? |
 
 3. **Calculate composite score:**
    - Sum all dimension scores (range: 0–10)
@@ -385,8 +405,8 @@ Relevance: 2/2
 Evidence Quality: 2/2
   Peer-reviewed academic source, 2019 publication, reputable journal
 
-Citation Placement: 2/2
-  Citation is complete (author, year); source is retrievable
+Citation Placement & Traceability: 2/2
+  Citation is positioned immediately after the claim; complete (author, year); source is readily retrievable
 
 COMPOSITE SCORE: 10/10
 

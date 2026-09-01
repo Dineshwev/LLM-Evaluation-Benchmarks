@@ -245,14 +245,14 @@ Is the evidence from a credible, reliable, and appropriately recent source?
 | **1** | Moderate quality | Secondary source, reasonable credibility, adequate recency |
 | **0** | Low quality | Unreliable source, outdated, lacks credibility, anecdotal |
 
-### **Dimension 5: Citation Placement**
-Is the citation appropriately positioned and correctly attributed?
+### **Dimension 5: Citation Placement & Traceability**
+Is the citation appropriately positioned, clearly associated with the claim, and can the source be traced/retrieved?
 
 | Rating | Meaning | Explanation |
 |--------|---------|-------------|
-| **2** | Properly cited | Clear, complete citation with specific reference point |
-| **1** | Partially cited | Citation provided but lacks some details (page, date, etc.) |
-| **0** | Not cited | No citation or non-retrievable source |
+| **2** | Fully traceable | Citation is positioned near the claim, clearly associated, and the source can be identified and retrieved |
+| **1** | Partially traceable | Citation is provided but is unclear, distant from claim, or lacks details that make retrieval difficult |
+| **0** | Not traceable | No citation provided, or citation is too vague to identify the intended source |
 
 ---
 
@@ -282,19 +282,22 @@ Sum scores across all five dimensions to generate a composite score out of 10.
 
 ### **Using Scores in Verdict Assignment**
 
-Composite scores serve as **supporting evidence** for verdict assignment but should not be purely mechanical:
+Composite scores serve as **supporting evidence** for verdict assignment but should not be purely mechanical. **The composite score supports but does not determine the final verdict. Evidence-based decision rules take precedence over numerical score ranges.**
+
+This is critical because a claim can theoretically receive a high dimensional score but still be only Partially Supported if a core component remains unsupported:
 
 1. **Calculate the composite score** across all dimensions
 2. **Consult core evaluation questions** to confirm verdict alignment
 3. **Apply decision rules** (Section 6) when borderline cases arise
-4. **Document reasoning** linking scores to the assigned verdict
+4. **Verify that verdict aligns with incomplete components** — if any essential claim component lacks support, the verdict should reflect this regardless of overall score
+5. **Document reasoning** linking scores and decision rules to the assigned verdict
 
 **Example:**
 - Entailment: 2 (strong)
 - Completeness: 1 (partial)
 - Relevance: 2 (high)
 - Evidence Quality: 2 (high)
-- Citation Placement: 2 (proper)
+- Citation Placement & Traceability: 2 (proper)
 - **Composite: 9/10**
 - **Verdict:** Fully Supported or Partially Supported (depending on which component is unsupported)
 
