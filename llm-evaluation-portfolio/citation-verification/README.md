@@ -114,20 +114,24 @@ A citation exists and is relevant to the claim, but the available evidence is to
 
 ```
 citation-verification/
-├── README.md                 # Project documentation (this file)
-├── test-cases/               # Individual case studies
-│   ├── case_001.md
-│   ├── case_002.md
-│   └── ...
-├── evaluations/              # Structured evaluation results
-│   ├── summary.md            # Aggregate findings and analysis
-│   └── results.csv           # Machine-readable evaluation data
+├── README.md                                      # Project documentation (this file)
+├── methodology.md                                 # Step-by-step evaluation methodology (v1.0)
+├── rubric.md                                      # Five-dimension scoring rubric (v1.0)
+├── test-cases/                                    # Individual case studies
+│   ├── case_001_supabase_planetscale_neon.md      # Database pricing & features
+│   ├── case_002_hnsw_vs_ivf.md                    # Vector search algorithms
+│   ├── case_003_eu_ai_act.md                      # EU AI Act overview
+│   ├── case_004_eu_ai_act_risk_framework.md       # EU AI Act risk framework (9.2/10)
+│   ├── case_005_api_security_citation_failures.md # API data retention & privacy (8.2/10)
+│   └── case_006_ai_coding_assistant_privacy.md    # AI coding assistant privacy (6.3/10)
+└── evaluations/                                   # Aggregate evaluation results
+    └── cross_case_synthesis_004_006.md            # Cross-case synthesis: Cases 004–006
 ```
 
 ### Directory Details
 
-- **test-cases/** → Contains individual citation verification case studies. Each case documents an AI-generated response, its claims, cited sources, and detailed evaluation.
-- **evaluations/** → Contains aggregated results, summary analyses, and structured data files suitable for further analysis or reporting.
+- **test-cases/** → Contains individual citation verification case studies. Each case documents an AI-generated response, its claims, cited sources, and a full claim-by-claim evaluation with rubric scores and verdict assignments.
+- **evaluations/** → Contains cross-case synthesis, pattern analysis, and aggregate portfolio findings drawn from completed case evaluations.
 
 ---
 
