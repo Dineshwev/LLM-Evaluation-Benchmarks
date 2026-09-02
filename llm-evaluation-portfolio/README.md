@@ -13,8 +13,8 @@ The work is organized into four portfolio areas. Each area contains case studies
 | Area | Description | Status |
 |---|---|---|
 | [Citation Verification](./citation-verification/) | Structured evaluation of whether AI-generated citations actually support the claims they purport to validate | Active — Cases 001–006 complete |
-| [LLM Response Evaluation](./llm-response-evaluation/) | Quality assessment of AI-generated responses across multiple dimensions | In progress |
-| [Adversarial Testing](./adversarial-testing/) | Evaluation of AI system behavior under adversarial prompting conditions | In progress |
+| [LLM Response Evaluation](./llm-response-evaluation/) | Quality assessment of AI-generated responses across multiple dimensions | Active — Cases 001–008 complete + Synthesis |
+| [Adversarial Testing](./adversarial-testing/) | Evaluation of AI system behavior under adversarial prompting conditions | Active — Cases 001–008 complete + Synthesis |
 | [Methodology](./methodology/) | Core evaluation frameworks, rubrics, and decision procedures used across this portfolio | Active |
 
 ---

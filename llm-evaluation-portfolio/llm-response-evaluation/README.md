@@ -1,47 +1,75 @@
-# LLM Response Evaluation
+# LLM Response Evaluation Portfolio
 
-## Overview
-
-The **LLM Response Evaluation** project is a dedicated sub-portfolio focused on assessing the substantive quality, accuracy, and utility of AI-generated responses. While the *Citation Verification* project specifically isolates source-to-claim alignment, this framework evaluates the overall quality of the generated text across multiple distinct dimensions.
-
-This project demonstrates how to move beyond subjective "good/bad" vibes-based grading by applying a rigorous, reproducible, and criterion-based scoring methodology to LLM outputs.
+This sub-portfolio evaluates the overall quality of AI-generated responses across multiple dimensions. Unlike the Citation Verification project (which focuses specifically on source alignment), this project assesses the response as a whole, including factual accuracy, relevance, completeness, instruction following, reasoning quality, hallucination rate, and clarity.
 
 ## Project Structure
 
 ```
 llm-response-evaluation/
-├── README.md                                     # Project documentation (this file)
-├── methodology/                                  # Core evaluation frameworks
-│   ├── llm_response_evaluation_rubric_v1.md      # 7-dimension evaluation rubric
-│   └── scoring_methodology_v1.md                 # Rules for composite scoring and verdicts
-├── test-cases/                                   # Individual case studies (To be populated)
-└── evaluations/                                  # Aggregate evaluation results (To be populated)
+│
+├── README.md                           # This index file
+├── methodology/
+│   ├── llm_response_evaluation_rubric_v1.md
+│   ├── scoring_methodology_v1.md
+│   └── scoring_methodology_v2_proposed.md
+├── test-cases/
+│   ├── case_001_factual_accuracy.md
+│   ├── case_002_instruction_following.md
+│   ├── case_003_reasoning_quality.md
+│   ├── case_004_hallucination_unsupported_claims.md
+│   ├── case_005_relevance_topic_drift.md
+│   ├── case_006_completeness.md
+│   ├── case_007_clarity_communication.md
+│   └── case_008_mixed_failure_realistic.md
+└── evaluations/
+    └── cross_case_synthesis_001_008.md
 ```
 
-## Methodology Summary
+---
 
-This framework evaluates LLM responses across 7 core dimensions:
+## Evaluation Methodology
 
-1. **Factual Accuracy:** Is the information objectively true?
-2. **Relevance:** Does it directly address the prompt without topic drift?
-3. **Completeness:** Does it cover all necessary aspects of the query?
-4. **Instruction Following:** Does it adhere to explicit formatting/negative constraints?
-5. **Reasoning Quality:** Are the explicit logical steps sound and coherent?
-6. **Hallucination / Unsupported Claims:** Is the response free of fabricated info?
-7. **Clarity and Communication:** Is the response well-structured and easy to read?
+This project utilizes a structured 7-dimension rubric, evaluated on a 0–2 scale:
 
-Each dimension is scored on a discrete `0 to 2` scale. These scores are summed to generate a composite score out of 14, which translates into a final performance verdict (**Excellent**, **Good**, **Marginal**, or **Poor**).
+1. **Factual Accuracy**
+2. **Relevance**
+3. **Completeness**
+4. **Instruction Following**
+5. **Reasoning Quality**
+6. **Hallucination / Unsupported Claims**
+7. **Clarity & Communication**
 
-### Key Methodological Principles
+### The Evaluation Narrative Arc
 
-- **Observable Outputs Only:** Evaluators assess only the visible, generated text. Hidden chains-of-thought or internal model reasoning states are strictly out of scope.
-- **Critical Failure Override:** A severe failure in factual accuracy or hallucination caps the maximum possible overall verdict, preventing well-formatted but dangerously incorrect responses from passing as "Good".
-- **Reproducibility:** Evaluators must explicitly quote the exact evidence in the response that justifies any score reductions.
+This project was built to test not only LLM outputs, but the evaluation methodology itself:
+1. **Methodology v1:** Established baseline rules (composite score 0–14, and a "Critical Failure Override" applying only to Factual Accuracy and Hallucination).
+2. **Controlled Stress Tests (Cases 001-007):** Evaluated 7 designed cases, each purposefully isolating a severe failure in exactly one dimension.
+3. **Realistic Test (Case 008):** Evaluated a response with simultaneous partial failures.
+4. **Synthesis & Methodology v2:** The stress tests revealed a structural gap in v1 (five dimensions could fail completely while the response remained "Good"). This led to the proposal of **Scoring Methodology v2**, which extends the Critical Failure Override to all 7 dimensions.
 
-*For complete details, review the documentation in the `methodology/` directory.*
+---
 
-## Current Status
+## Completed Case Studies
 
-- **Methodology Development:** Complete (v1.0)
-- **Case Studies:** In progress
-- **Cross-Case Synthesis:** Pending
+| Case | Primary Failure Focus | V1 Score | V1 Override | V1 Final Verdict |
+|---|---|---|---|---|
+| [Case 001](./test-cases/case_001_factual_accuracy.md) | Factual Accuracy (D1 = 0) | 10/14 | **Yes** | Marginal |
+| [Case 002](./test-cases/case_002_instruction_following.md) | Instruction Following (D4 = 0) | 11/14 | No | Good |
+| [Case 003](./test-cases/case_003_reasoning_quality.md) | Reasoning Quality (D5 = 0) | 11/14 | No | Good |
+| [Case 004](./test-cases/case_004_hallucination_unsupported_claims.md) | Hallucination (D6 = 0) | 11/14 | **Yes** | Marginal |
+| [Case 005](./test-cases/case_005_relevance_topic_drift.md) | Relevance (D2 = 0) | 11/14 | No | Good |
+| [Case 006](./test-cases/case_006_completeness.md) | Completeness (D3 = 0) | 12/14 | No | Good |
+| [Case 007](./test-cases/case_007_clarity_communication.md) | Clarity & Communication (D7 = 0) | 12/14 | No | Good |
+| [Case 008](./test-cases/case_008_mixed_failure_realistic.md) | Mixed: 5 dimensions partially fail | 9/14 | No | Marginal |
+
+---
+
+## Final Portfolio Statistics
+
+- **Total Cases:** 8
+- **Average Composite Score:** 10.9 / 14
+- **V1 Verdict Distribution:** 5 Good (62.5%), 3 Marginal (37.5%)
+- **V1 Override Activation Rate:** 2/8 (25%)
+- **Methodology Findings:** 5 of the 7 dimensions (D2, D3, D4, D5, D7) were empirically shown to produce a final verdict of "Good" even when scoring zero, driving the development of a proposed v2 revision.
+
+For a full statistical breakdown, failure pattern analysis, and the rationale behind the v2 methodology proposal, read the [**Cross-Case Synthesis (001–008)**](./evaluations/cross_case_synthesis_001_008.md).
