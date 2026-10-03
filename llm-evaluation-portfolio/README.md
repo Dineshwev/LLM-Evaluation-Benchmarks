@@ -4,6 +4,8 @@
 
 This portfolio is an applied research and demonstration project focusing on the structured, reproducible evaluation of Large Language Model (LLM) outputs. 
 
+For a concise, machine-readable overview to share with an AI assistant, see [llm.xml](./llm.xml). If the assistant cannot access this repository directly, provide it with the file or its public URL; the file is not automatically discovered by every assistant.
+
 The central problem this portfolio addresses is that **simple overall quality scores often hide catastrophic failures**. A response that is beautifully formatted, polite, and highly relevant may simultaneously contain fabricated citations, factually incorrect assertions, or dangerous adversarial compliance. 
 
 To solve this, the portfolio demonstrates a full evaluation methodology cycle: **Framework design → Multi-dimensional rubric creation → Controlled stress testing → Cross-case analysis → Methodology refinement.**
