@@ -1,0 +1,8 @@
+# LLM Evaluation Portfolio
+
+An applied research and demonstration portfolio about structured, reproducible evaluation of large language model outputs. It uses task-specific rubrics, controlled stress tests, and cross-case analysis to examine citation support, response quality, and adversarial resilience, while documenting methodology and limitations. It is not a representative benchmark or production evaluation system.
+
+- Citation Verification: https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/citation-verification/README.md
+- LLM Response Evaluation: https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/llm-response-evaluation/README.md
+- Adversarial Testing: https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/adversarial-testing/README.md
+- Methodology: https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/methodology/README.md

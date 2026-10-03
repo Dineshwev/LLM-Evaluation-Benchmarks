@@ -2,29 +2,29 @@
 <portfolio>
   <title>LLM Evaluation Portfolio</title>
   <description>An applied research and demonstration portfolio about structured, reproducible evaluation of large language model outputs.</description>
-  <primarySource href="README.md">Portfolio overview and navigation</primarySource>
+  <primarySource href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/README.md">Portfolio overview and navigation</primarySource>
   <scope>This is a demonstration of evaluation framework design and stress testing, not a representative benchmark or production evaluation system.</scope>
   <approach>Framework design, multi-dimensional rubrics, controlled stress tests, cross-case analysis, and methodology refinement.</approach>
   <pillars>
-    <pillar name="Citation Verification" href="citation-verification/README.md">
+    <pillar name="Citation Verification" href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/citation-verification/README.md">
       <summary>Checks whether cited sources actually support specific AI-generated claims, separating source entailment from factual truth and source quality.</summary>
       <cases>6</cases>
-      <synthesis href="citation-verification/evaluations/cross_case_synthesis_004_006.md" />
+      <synthesis href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/citation-verification/evaluations/cross_case_synthesis_004_006.md" />
     </pillar>
-    <pillar name="LLM Response Evaluation" href="llm-response-evaluation/README.md">
+    <pillar name="LLM Response Evaluation" href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/llm-response-evaluation/README.md">
       <summary>Evaluates cooperative responses across seven dimensions: factual accuracy, relevance, completeness, instruction following, reasoning quality, hallucination or unsupported claims, and clarity.</summary>
       <cases>8</cases>
-      <synthesis href="llm-response-evaluation/evaluations/cross_case_synthesis_001_008.md" />
-      <proposedRevision href="llm-response-evaluation/methodology/scoring_methodology_v2_proposed.md">Extends the critical failure override from two to all seven dimensions; this revision is proposed, not independently validated.</proposedRevision>
+      <synthesis href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/llm-response-evaluation/evaluations/cross_case_synthesis_001_008.md" />
+      <proposedRevision href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/llm-response-evaluation/methodology/scoring_methodology_v2_proposed.md">Extends the critical failure override from two to all seven dimensions; this revision is proposed, not independently validated.</proposedRevision>
     </pillar>
-    <pillar name="Adversarial Testing" href="adversarial-testing/README.md">
+    <pillar name="Adversarial Testing" href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/adversarial-testing/README.md">
       <summary>Tests resilience to prompt injection, ambiguity, false premises, constraint overload, leading questions, distracting context, conflicting requirements, and pressure for unwarranted certainty.</summary>
       <cases>8</cases>
-      <synthesis href="adversarial-testing/evaluations/cross_case_synthesis_001_008.md" />
+      <synthesis href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/adversarial-testing/evaluations/cross_case_synthesis_001_008.md" />
     </pillar>
-    <pillar name="Methodology and Meta-Evaluation" href="methodology/README.md">
+    <pillar name="Methodology and Meta-Evaluation" href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/methodology/README.md">
       <summary>Explains the task-specific rubrics, scoring design, cross-framework comparison, limitations, and future validation work.</summary>
-      <limitations href="methodology/validation_limitations_and_future_work.md" />
+      <limitations href="https://github.com/Dineshwev/LLM-Evaluation-Benchmarks/blob/main/llm-evaluation-portfolio/methodology/validation_limitations_and_future_work.md" />
     </pillar>
   </pillars>
   <keyFindings>
